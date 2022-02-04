@@ -41,7 +41,7 @@ jobs:
           command: "npm run build"
           working_directory: ./ui
 
-  cd-deploy:
+  deploy-gcloud:
     filters:
       branches:
         only:
@@ -63,3 +63,7 @@ workflows:
       - ci-api
       - ci-engine
       - ci-ui
+  cd-dev:
+    jobs:
+      - deploy-gcloud
+
