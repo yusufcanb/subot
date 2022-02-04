@@ -39,5 +39,4 @@ workflows:
       - ci-api
       - ci-engine
       - ci-ui
-  nlp-model-build:
 
