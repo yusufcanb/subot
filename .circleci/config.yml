@@ -24,7 +24,9 @@ jobs:
           name: "build with maven"
           command: "mvn clean package"
           working_directory: ./api
-
+      - store_artifacts:
+          path: target/subot-api-*.jar
+          destination: jars
   ci-ui:
     docker:
       - image: node:14
