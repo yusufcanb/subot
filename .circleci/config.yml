@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   ci-engine:
-    working_directory: ~/ui
+    working_directory: ./engine
     docker:
       - image: pytorch/pytorch:1.9.0-cuda10.2-cudnn7-runtime
     steps:
@@ -16,6 +16,7 @@ jobs:
       - store_artifacts:
           path: data.pth
   ci-api:
+    working_directory: ./api
     docker:
       - image: maven:3.8-jdk-11
     steps:
@@ -23,11 +24,10 @@ jobs:
       - run:
           name: "Build with Maven"
           command: "mvn clean package"
-          working_directory: ./api
       - store_artifacts:
           path:  ./api/target/subot-api-*.jar
   ci-ui:
-    working_directory: ~/ui
+    working_directory: ./ui
     docker:
       - image: node:14
     steps:
