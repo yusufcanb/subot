@@ -2,6 +2,7 @@ version: 2.1
 
 jobs:
   ci-engine:
+    working_directory: ~/ui
     docker:
       - image: pytorch/pytorch:1.9.0-cuda10.2-cudnn7-runtime
     steps:
@@ -9,13 +10,11 @@ jobs:
       - run:
           name: "Install Requirements"
           command: "pip install -r requirements.txt"
-          working_directory: ./engine
       - run:
           name: "Train NLP Model"
           command: "python train.py"
-          working_directory: ./engine
       - store_artifacts:
-          path: ./engine/data.pth
+          path: data.pth
   ci-api:
     docker:
       - image: maven:3.8-jdk-11
@@ -28,6 +27,7 @@ jobs:
       - store_artifacts:
           path:  ./api/target/subot-api-*.jar
   ci-ui:
+    working_directory: ~/ui
     docker:
       - image: node:14
     steps:
@@ -35,11 +35,9 @@ jobs:
       - run:
           name: "Install Node Modules"
           command: "npm install"
-          working_directory: ./ui
       - run:
           name: "Build Vue Project"
           command: "npm run build"
-          working_directory: ./ui
 
 workflows:
   ci-jobs:
