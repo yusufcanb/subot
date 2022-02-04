@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  gcp-cli: circleci/gcp-cli@1.0.0
 
 jobs:
   ci-engine:
@@ -43,13 +41,24 @@ jobs:
           command: "npm run build"
           working_directory: ./ui
 
+  cd-deploy:
+    filters:
+      branches:
+        only:
+          - master
+    docker:
+      - image: google/cloud-sdk
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    steps:
+      - run: |
+          echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
+          gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
+          gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
+
 workflows:
-  install_and_configure_cli:
-    jobs:
-      - gcp-cli/install_and_initialize_cli:
-          context: default-context
-          executor: gcp-cli/default
-  
+
   ci-jobs:
     jobs:
       - ci-api
