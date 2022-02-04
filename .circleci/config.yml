@@ -59,13 +59,16 @@ workflows:
       - ci-api
       - ci-engine
       - ci-ui
-  
+
   cd-dev:
     jobs:
+      - ci-api
+      - ci-engine
+      - ci-ui
       - deploy-gcloud:
           requires:
-            - ci-engine
             - ci-api
+            - ci-engine
             - ci-ui
           filters:
             branches:
