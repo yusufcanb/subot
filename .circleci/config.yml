@@ -58,7 +58,6 @@ jobs:
           gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
 
 workflows:
-
   ci-jobs:
     jobs:
       - ci-api
