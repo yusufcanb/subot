@@ -16,7 +16,6 @@ jobs:
           working_directory: ./engine
       - store_artifacts:
           path: data.pth
-          destination: nlp-model
   ci-api:
     docker:
       - image: maven:3.8-jdk-11
@@ -28,7 +27,6 @@ jobs:
           working_directory: ./api
       - store_artifacts:
           path: target/subot-api-*.jar
-          destination: jars
   ci-ui:
     docker:
       - image: node:14
@@ -40,7 +38,7 @@ jobs:
           working_directory: ./ui
       - run:
           name: "Build Vue Project"
-          command: "npm build"
+          command: "npm run build"
           working_directory: ./ui
 
 workflows:
