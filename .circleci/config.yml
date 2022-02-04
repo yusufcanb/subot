@@ -64,7 +64,9 @@ workflows:
     jobs:
       - deploy-gcloud:
           requires:
-            - ci-jobs
+            - ci-engine
+            - ci-api
+            - ci-ui
           filters:
             branches:
               only:
