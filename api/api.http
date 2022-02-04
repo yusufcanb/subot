@@ -1,0 +1,20 @@
+### Create New Session
+
+POST http://localhost:8080/create
+Accept: application/json
+
+### Get Session By Id
+
+GET http://localhost:8080/get?id=1
+Accept: application/json
+
+### Ask Question
+
+POST http://localhost:8080/ask
+Accept: text/plain
+Content-Type: application/json
+
+{
+  "sessionId": 1,
+  "message": "Hi there!"
+}

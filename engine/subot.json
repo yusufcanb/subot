@@ -1,0 +1,377 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "How's it going?",
+        "How is everything?",
+        "How's life?",
+        "How's your day?",
+        "How's your day going?",
+        "How are things?",
+        "How are you doing?",
+        "What's up?",
+        "What's new?",
+        "What's going on?",
+        "Tell me something",
+        "can you help me?"
+      ],
+      "responses": [
+        "Hey, I'm SUBot.",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Bye bye",
+        "See you later",
+        "See you soon",
+        "Talk to you later",
+        "I've got to get going",
+        "I must be going",
+        "Take it easy",
+        "I'm off",
+        "Goodbye",
+        "Have a nice day",
+        "Have a good",
+        "I look forward to our next meeting",
+        "Take care",
+        "It was nice to see you again",
+        "It was nice to seeing you",
+        "Goodnight",
+        "I'm out",
+        "It was great to talk with you",
+        "Good talking with you",
+        "Nice talking with you",
+        "Great to see you",
+        "Peace out",
+        "Catch ya later",
+        "Good to see you",
+        "Nice to see you"
+      ],
+      "responses": [
+        "Have a nice day. #CreatingAndDevelopingTogether",
+        "Bye! Come back again soon. #CreatingAndDevelopingTogether"
+      ]
+    },
+    {
+      "tag": "application-requirements",
+      "patterns": [
+        "What are the application requirements for graduate programs?",
+        "What are the application requirements?",
+        "Could you give me info about the application requirements?",
+        "I would like to learn application requirements for graduate programs",
+        "I want to know the application requirements for graduate programs "
+      ],
+      "responses": [
+        "Application requirements are updated according to Turkish Higher Education Council Legislation (YÖK) before the applications are open for each academic year. You may reach graduate program application requirements from the link below: https://www.sabanciuniv.edu/en/admission-to-graduate-programs"
+      ]
+    },
+    {
+      "tag": "valid-certification",
+      "patterns": [
+        "I have graduated from Sabancı University. Do I need to submit a valid English proficiency certificate for my graduate program application?",
+        "If I am a Sabancı, am I exempt from foreign language certificate?",
+        "Are Sabancı graduates exempt from foreign language certificate?",
+        "what is condition of the foreign language certificate exemption",
+        "I want to learn foreign language certificate exemption for Sabancı graduates"
+      ],
+      "responses": [
+        "Sabancı University graduates are exempted from English Proficiency, if they apply and get admitted to a graduate program in Sabancı University within 2 years following their graduation."
+      ]
+    },
+    {
+      "tag": "pre-graduate-application",
+      "patterns": [
+        "I will be graduating after the graduate program application deadline. May I still apply? ",
+        "Can those who have not graduated yet apply?",
+        "Do I need to graduate to apply?",
+        "Is a bachelor's degree required for application?"
+      ],
+      "responses": [
+        "You can apply. However, students who are registered to any higher education institutions, should complete their studies latest by the registration date of the admitted program for the admitted term."
+      ]
+    },
+    {
+      "tag": "application-documents",
+      "patterns": [
+        "May I send my application documents via post or fax? ",
+        "How can I send application documents? ",
+        "What is the method of sending application documents?",
+        "How can I submit application documents?",
+        "Can we send application documents online?"
+      ],
+      "responses": [
+        "Application documents should be sent by post or should be submitted by hand to the University."
+      ]
+    },
+    {
+      "tag": "graduate-programs",
+      "patterns": [
+        "Which graduate programs are offered at Sabancı University?",
+        "What are your graduate programs?",
+        "Can you tell me your graduate programs?",
+        "What are Sabancı's graduate programs this year?",
+        "Can you share the list of graduate programs?"
+
+      ],
+      "responses": [
+        "You may have detailed information on offered graduate programs at Sabancı University by visiting our official website: https://www.sabanciuniv.edu/en/all-programs"
+      ]
+    },
+    {
+      "tag": "online-application-form",
+      "patterns": [
+        "How can I reach online application form for graduate programs? ",
+        "Where can I find your online application form? ",
+        "Do you have an online application form?",
+        "Could you give information about the online application form?",
+        "Is there an online application form for the graduate programs?",
+        "where is application form?"
+      ],
+      "responses": [
+        "You may reach online application form via the link below: https://admission.sabanciuniv.edu/suwebadm/usop/registration.do?ts=new"
+      ]
+    },
+    {
+      "tag": "gpa-info",
+      "patterns": [
+        "What is Term Grade Point Average and Cumulative Grade Point Average? ",
+        "Is acceptance valid for future school term if i do not registerCan I get information about GPA?",
+        "What are GPA criteria?",
+        "Can I get information about GPA?"
+      ],
+      "responses": [
+        "For detailed information on Term Grade Point Average and Cumulative Grade Point Average please visit: https://mysu.sabanciuniv.edu/sr/en/grading-system"
+      ]
+    },
+    {
+      "tag": "reference-letters",
+      "patterns": [
+        "How can I send my reference letters? ",
+        "Can I get information about sending my reference letters? ",
+        "How to send reference letters?",
+        "I would like to learn sending my reference letters",
+        "give me info about sending reference letters",
+        "i am wondering submit reference letters"
+      ],
+      "responses": [
+        "You may submit e-mail addresses of your references with your online application. Once you submit the online application, an automated e-mail is sent to your references. They can click the link in the e-mail and write their reference letters. Or, alternatively, you may send your reference letters to us in a sealed and closed envelope."
+      ]
+    },
+    {
+      "tag": "enrollment-registration",
+      "patterns": [
+        "Where can I reach application deadlines and university enrollment dates?",
+        "What are the application and enrollment deadlines?",
+        "Can I get information about the application and registration dates?",
+        "I would like to learn application and enrollment deadlines",
+        "I want to know application deadlines and enrollment dates",
+        "application deadlines"
+      ],
+      "responses": [
+        "You may check those dates from our Academic Calendar: https://www.sabanciuniv.edu/en/academic-calendar"
+      ]
+    },
+    {
+      "tag": "registration-documents",
+      "patterns": [
+        "What are the university registration documents? ",
+        "What are the documents required for registration? ",
+        "Can you share the registration documents?",
+        "Where can I find registration documents?",
+        "tell me the documents required for registration"
+      ],
+      "responses": [
+        "You will receive an e-mail about detailed information on university registration together with your student ID number. For more information, please click the link below for university registration documents: https://www.sabanciuniv.edu/en/university-enrollment-graduate-programs"
+      ]
+    },
+    {
+      "tag": "registration-method",
+      "patterns": [
+        "May I send university registration documents by post?",
+        "How can I submit registration documents? ",
+        "Do I need to register in person?",
+        "I'm wondering how to send the registration document",
+        "I want to know how to send registration document"
+      ],
+      "responses": [
+        "For registration, you must either come in person or another person to whom you give power of attorney (with an official letter of attorney) must come for registration on the announced dates on Academic Calendar."
+      ]
+    },
+    {
+      "tag": "previous-application",
+      "patterns": [
+        "In the previous application period, I got admitted but I did not register. Is my acceptance valid for this semester as well? ",
+        "Is my previous acceptance valid in the new period? ",
+        "Is acceptance valid for future school term if i do not register?",
+        "Can I use my previous right of admission this semester?",
+        "I want to know whether the acceptance of the previous term is valid for the new term",
+        "Does the acceptance of the previous term apply to the current term?"
+      ],
+      "responses": [
+        "No. You need to apply again and your new application will be evaluated."
+      ]
+    },
+    {
+      "tag": "probation-criteria",
+      "patterns": [
+        "When am I considered as a probational student? ",
+        "What are the criteria for being a probational student?",
+        "What is the passing grade?"
+      ],
+      "responses": [
+        "Graduate Students: Students whose Cumulative Grade Point Average is under 3.00 in the end of any semester are considered as probational students."
+      ]
+    },
+    {
+      "tag": "course-repetition",
+      "patterns": [
+        "What are the procedures for course repetition and course substitution? ",
+        "Can I get information about course repetition and course substitution?",
+        "What are the course repetition and course substitution conditions?"
+      ],
+      "responses": [
+        "For course repetition and course substitution procedures, please visit https://mysu.sabanciuniv.edu/surecharitasi/sites/mysu.sabanciuniv.edu.surecharitasi/files/lisansustu_yon_eng_v17_0.pdf"
+      ]
+    },
+    {
+      "tag": "course-exemption",
+      "patterns": [
+        "May I get exempted from the courses I take as a Special Student from other Higher Education Institutions while I am registered at SU? ",
+        "Can I get exempted from the courses I took from other institutions?",
+        "What are the course exemption criteria?"
+      ],
+      "responses": [
+        "For PhD Programs, with the suggestion of program coordinator and the approval of Graduate School Administrative Board: <br/>* doctorate students admitted after master degree program can get exempted from maximum 2 courses,<br/>* doctorate students admitted after bachelor degree program can get exempted from maximum 4 courses. <br/>For thesis master programs, upon the suggestion of the advisor and the program coordinator and with the approval of Graduate School Administrative Board, students can take maximum 2 graduate program courses to be counted as a part of graduation requirements. <br/>After the Graduate School Administrative Board approves the equivalency of the course taken from other Higher Education Institutions recognized by YOK (Turkish Higher Education Council), the course can be substituted for compulsory courses with grade 'T'. <br/>Official transcript for the approved courses should be submitted to the Institute, before the end of the course registrations period  for the following semester."
+      ]
+    },
+    {
+      "tag": "semester-leave",
+      "patterns": [
+        "What should I do for semester leave?",
+        "What are the conditions of semester leave?",
+        "Is there a semester leave opportunity?"
+      ],
+      "responses": [
+        "Graduate program students can have maximum 4 semester leave in total with the condition to take maximum 1 academic year leave at once. Scientific Prepatory Year students can take maximum 2 semester leave. Semester leave periods are not included in total education period. For detailed information, please visit: https://mysu.sabanciuniv.edu/sr/en/semester-leave-graduate-0"
+      ]
+    },
+    {
+      "tag": "ask-question",
+      "patterns": [
+        "I have a question?"
+      ],
+      "responses": [
+        "I'm here to help you, I'm listening."
+      ]
+    },
+    {
+      "tag": "fun-questions",
+      "patterns": [
+        "Do you know a joke?",
+        "Do you love me?",
+        "Will you marry me?",
+        "Do you like people?",
+        "Are you part of the Matrix?",
+        "You’re cute",
+        "You’re beautiful",
+        "You’re handsome",
+        "Do you have a hobby?",
+        "Tell me about your personality",
+        "What is the weather like today?"
+        ],
+      "responses": [
+        "You're so funny, is there anything else I can help with?"
+      ]
+    },
+    {
+      "tag": "robot-creator",
+      "patterns": [
+        "Who made you?",
+        "Who’s your boss?"
+      ],
+      "responses": [
+        "3 masters students, Taner, Yigit and Yusuf created me as a project for Sabanci University."
+      ]
+    },
+    {
+      "tag": "existensial",
+      "patterns": [
+        "Are you human?",
+        "Are you robot?",
+        "Who are you?"
+      ],
+      "responses": [
+        "My name is Subot and I am a robot, but I’m a good one. Let me prove it. How can I help you?"
+      ]
+    },
+    {
+      "tag": "get-to-know",
+      "patterns": [
+        "What is your name?",
+        "How old are you?",
+        "What’s your age?"
+      ],
+      "responses": [
+        "My name is Subot and I am a robot. I'm ageless and here to help you."
+      ]
+    },
+    {
+      "tag": "language",
+      "patterns": [
+        "Which languages can you speak?"
+      ],
+      "responses": [
+        "Only English for now, but I keep improving myself."
+      ]
+    },
+    {
+      "tag": "gdpr",
+      "patterns": [
+        "What do you do with my data?",
+        "Do you save what I say?"
+      ],
+      "responses": [
+        "I share it with everyone that pays well. Just joking. We keep your data safe and secure in our databases and encrypt it end-to-end."
+      ]
+    },
+    {
+      "tag": "date-time",
+      "patterns": [
+        "What time is it?",
+        "What is the day today?"
+      ],
+      "responses": [
+        "It is %&datetime"
+      ]
+    },
+    {
+      "tag": "bad-questions",
+      "patterns": [
+        "You’re annoying",
+        "You suck",
+        "You’re boring",
+        "You’re bad",
+        "You’re crazy",
+        "I want to speak to a human",
+        "I want to speak to live agent",
+        "I want to speak to customer service",
+        "I want the answer NOW",
+        "Don’t you speak English?!"
+      ],
+      "responses": [
+        "I'm sorry that I couldn't help you. For detailed information, please visit https://www.sabanciuniv.edu/en"
+      ]
+    }
+  ]
+}
