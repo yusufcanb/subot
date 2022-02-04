@@ -42,11 +42,6 @@ jobs:
           name: "Build Vue Project"
           command: "npm run build"
           working_directory: ./ui
-  cd:gcloud:
-    docker:
-      - image: node:14
-    steps:
-      - checkout
 
 workflows:
   install_and_configure_cli:
@@ -54,6 +49,7 @@ workflows:
       - gcp-cli/install_and_initialize_cli:
           context: default-context
           executor: gcp-cli/default
+  
   ci-jobs:
     jobs:
       - ci-api
