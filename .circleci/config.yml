@@ -63,6 +63,8 @@ workflows:
   cd-dev:
     jobs:
       - deploy-gcloud:
+          requires:
+            - ci-jobs
           filters:
             branches:
               only:
