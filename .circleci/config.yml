@@ -12,7 +12,9 @@ jobs:
       - run:
           command: "python train.py"
           working_directory: ./engine
-
+      - store_artifacts:
+          path: data.pth
+          destination: nlp-model
   ci-api:
     docker:
       - image: maven:3.8-jdk-11
@@ -39,4 +41,3 @@ workflows:
       - ci-api
       - ci-engine
       - ci-ui
-
