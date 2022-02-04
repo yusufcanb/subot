@@ -1,0 +1,25 @@
+version: "3"
+services:
+  subot-engine:
+    build:
+      context: ./engine
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+  subot-api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    environment:
+      SUBOT_ENGINE_URL: "http://subot-engine:5000"
+    ports:
+      - "8080:8080"
+  subot-web:
+    build:
+      context: ./ui
+      dockerfile: Dockerfile
+    container_name: subot-web
+    hostname: subot-web
+    restart: on-failure
+    ports:
+      - "8000:80"

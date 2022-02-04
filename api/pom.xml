@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sabanciuniv.it592.subot</groupId>
-    <artifactId>subot-backend</artifactId>
+    <artifactId>subot-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>subot-backend</name>
+    <name>subot-api</name>
     <description>SuBot Backend Project</description>
     <properties>
         <java.version>1.8</java.version>
