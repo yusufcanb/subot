@@ -26,7 +26,7 @@ jobs:
           command: "mvn clean package"
           working_directory: ./api
       - store_artifacts:
-          path:  ./api/target/*.jar
+          path: ./api/target/*.jar
   ci-ui:
     docker:
       - image: node:14
@@ -42,15 +42,11 @@ jobs:
           working_directory: ./ui
 
   deploy-gcloud:
-    filters:
-      branches:
-        only:
-          - master
     docker:
       - image: google/cloud-sdk
         auth:
           username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+          password: $DOCKERHUB_PASSWORD # context / project UI env-var reference
     steps:
       - run: |
           echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
@@ -63,7 +59,11 @@ workflows:
       - ci-api
       - ci-engine
       - ci-ui
+  
   cd-dev:
     jobs:
-      - deploy-gcloud
-
+      - deploy-gcloud:
+          filters:
+            branches:
+              only:
+                - master
