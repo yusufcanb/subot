@@ -15,7 +15,7 @@ jobs:
           command: "python train.py"
           working_directory: ./engine
       - store_artifacts:
-          path: data.pth
+          path: ./engine/data.pth
   ci-api:
     docker:
       - image: maven:3.8-jdk-11
@@ -26,7 +26,7 @@ jobs:
           command: "mvn clean package"
           working_directory: ./api
       - store_artifacts:
-          path: target/subot-api-*.jar
+          path:  ./api/target/subot-api-*.jar
   ci-ui:
     docker:
       - image: node:14
