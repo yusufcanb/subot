@@ -58,4 +58,4 @@ workflows:
 
   deploy-dev:
     jobs:
-      - deploy-dev
+      - deploy-ubuntu-s-1vcpu-1gb-fra1-01
