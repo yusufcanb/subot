@@ -58,15 +58,13 @@ workflows:
 
   deploy-dev:
     jobs:
-      - ci-jobs
-      - deploy-ubuntu-s-1vcpu-1gb-fra1-01:
-          filters:
-            tags:
-              only: /\d+(\.\d+){2}(-(alpha|beta)(\d+)?)?/
       - hold:
           type: approval
           requires:
             - deploy-ubuntu-s-1vcpu-1gb-fra1-01
-      - deploy:
+      - deploy-ubuntu-s-1vcpu-1gb-fra1-01:
           requires:
             - hold
+          filters:
+            tags:
+              only: /\d+(\.\d+){2}(-(alpha|beta)(\d+)?)?/
