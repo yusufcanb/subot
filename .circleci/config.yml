@@ -53,10 +53,12 @@ jobs:
     docker:
       - image: alpine:3.14
     steps:
-      - run: |
-          apk add --no-cache openssh
-          ssh root@${DEV_ENV_IP}
-
+      - run:
+          name: Install OpenSSH
+          command: apk add --no-cache openssh
+      - run:
+          name: Execute Deploy Script on DO Development Droplet
+          command: ssh user@host sh < deploy_dev.sh
 workflows:
   ci-jobs:
     jobs:
