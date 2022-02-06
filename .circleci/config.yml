@@ -50,9 +50,6 @@ jobs:
           command: docker-compose up -d
 
   deploy-ubuntu-s-1vcpu-1gb-fra1-01:
-    filters:
-      tags:
-        only: /\d+(\.\d+){2}(-(alpha|beta)(\d+)?)?/
     docker:
       - image: alpine:3.14
     steps:
@@ -72,5 +69,13 @@ workflows:
       - ci-docker
 
   deploy-dev:
+    triggers:
+      - schedule:
+          filters:
+            branches:
+              only: master
     jobs:
-      - deploy-ubuntu-s-1vcpu-1gb-fra1-01
+      - deploy-ubuntu-s-1vcpu-1gb-fra1-01:
+          filters:
+            tags:
+              only: /\d+(\.\d+){2}(-(alpha|beta)(\d+)?)?/
