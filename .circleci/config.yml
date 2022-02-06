@@ -41,6 +41,13 @@ jobs:
           command: "npm run build"
           working_directory: ./ui
 
+  ci-docker:
+    machine: true # Use a Linux VM instead of docker environment
+    steps:
+      - run:
+          name: Start docker-compose and verify service(s)
+          command: docker-compose up -d
+
   deploy-ubuntu-s-1vcpu-1gb-fra1-01:
     docker:
       - image: alpine:3.14
@@ -55,6 +62,7 @@ workflows:
       - ci-api
       - ci-engine
       - ci-ui
+      - ci-docker
 
   deploy-dev:
     jobs:
