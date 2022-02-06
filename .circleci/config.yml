@@ -41,17 +41,13 @@ jobs:
           command: "npm run build"
           working_directory: ./ui
 
-  deploy-gcloud:
+  deploy-ubuntu-s-1vcpu-1gb-fra1-01:
     docker:
-      - image: google/cloud-sdk
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD # context / project UI env-var reference
+      - image: alpine:3.14
     steps:
       - run: |
-          echo $GCLOUD_SERVICE_KEY | gcloud auth activate-service-account --key-file=-
-          gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
-          gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
+          apk add --no-cache openssh
+          ssh root@<<ubuntu-s-1vcpu-1gb-fra1-01>>
 
 workflows:
   ci-jobs:
@@ -60,17 +56,6 @@ workflows:
       - ci-engine
       - ci-ui
 
-  cd-dev:
+  deploy-dev:
     jobs:
-      - ci-api
-      - ci-engine
-      - ci-ui
-      - deploy-gcloud:
-          requires:
-            - ci-api
-            - ci-engine
-            - ci-ui
-          filters:
-            branches:
-              only:
-                - master
+      - deploy-dev
