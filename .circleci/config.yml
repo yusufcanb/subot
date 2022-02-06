@@ -71,6 +71,7 @@ workflows:
   deploy-dev:
     jobs:
       - deploy-ubuntu-s-1vcpu-1gb-fra1-01:
+          type: approval
           filters:
             tags:
               only: /\d+(\.\d+){2}(-(alpha|beta)(\d+)?)?/
