@@ -44,6 +44,7 @@ jobs:
   ci-docker:
     machine: true # Use a Linux VM instead of docker environment
     steps:
+      - checkout
       - run:
           name: Start docker-compose and verify service(s)
           command: docker-compose up -d
