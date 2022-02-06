@@ -18,4 +18,4 @@ services:
     hostname: subot-web
     restart: on-failure
     ports:
-      - "8000:80"
+      - "80:80"
