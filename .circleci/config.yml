@@ -60,8 +60,6 @@ workflows:
     jobs:
       - hold:
           type: approval
-          requires:
-            - deploy-ubuntu-s-1vcpu-1gb-fra1-01
       - deploy-ubuntu-s-1vcpu-1gb-fra1-01:
           requires:
             - hold
