@@ -50,6 +50,9 @@ jobs:
           command: docker-compose up -d
 
   deploy-ubuntu-s-1vcpu-1gb-fra1-01:
+    filters:
+      tags:
+        only: /\d+(\.\d+){2}(-(alpha|beta)(\d+)?)?/
     docker:
       - image: alpine:3.14
     steps:
@@ -59,6 +62,7 @@ jobs:
       - run:
           name: Execute Deploy Script on DO Development Droplet
           command: ssh user@host sh < deploy_dev.sh
+
 workflows:
   ci-jobs:
     jobs:
@@ -69,7 +73,4 @@ workflows:
 
   deploy-dev:
     jobs:
-      - deploy-ubuntu-s-1vcpu-1gb-fra1-01:
-          filters:
-            tags:
-              only: /\d+(\.\d+){2}(-(alpha|beta)(\d+)?)?/
+      - deploy-ubuntu-s-1vcpu-1gb-fra1-01
