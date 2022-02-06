@@ -47,7 +47,7 @@ jobs:
     steps:
       - run: |
           apk add --no-cache openssh
-          ssh root@<<ubuntu-s-1vcpu-1gb-fra1-01>>
+          ssh root@${DEV_ENV_IP}
 
 workflows:
   ci-jobs:
